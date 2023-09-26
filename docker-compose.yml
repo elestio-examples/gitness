@@ -5,6 +5,9 @@ services:
     restart: always
     ports:
       - "172.17.0.1:53521:3000"
+    environment:
+      - GITNESS_URL_API=https://${DOMAIN}/api
+      - GITNESS_URL_GIT=https://${DOMAIN}/git
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./storage/gitness:/data"
