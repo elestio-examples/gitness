@@ -4,10 +4,11 @@ services:
     image: "harness/gitness:latest"
     restart: always
     ports:
-      - "172.17.0.1:53521:3000"
+      - "172.17.0.1:53521:53521"
     environment:
       - GITNESS_URL_API=https://${DOMAIN}/api
       - GITNESS_URL_GIT=https://${DOMAIN}/git
+      - GITNESS_HTTP_PORT=53521
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./storage/gitness:/data"
