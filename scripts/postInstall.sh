@@ -5,7 +5,7 @@ set -o allexport; source .env; set +o allexport;
 echo "Waiting for software to be ready ..."
 sleep 30s;
 
-target=$(docker-compose port gitness 3000)
+target=$(docker-compose port gitness 53521)
 
 curl http://${target}/api/v1/register?include_cookie=true \
   -H 'accept: */*' \
