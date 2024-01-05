@@ -65,7 +65,7 @@ Run below steps after install:
       --data-raw '{"display_name":"root","email":"'${ADMIN_EMAIL}'","uid":"root","password":"'${ADMIN_PASSWORD}'"}' \
       --compressed
 
-You can access the Web UI at: `http://your-domain:6580`
+You can access the Web UI at: `http://your-domain:53521`
 
 ## Docker-compose
 
